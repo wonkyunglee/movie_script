@@ -5,7 +5,7 @@ Remove useless parts of a movie script file(.srt) and save it to the text file.
 
 ## What does it do?
 1. Parse the script file.
-1. Remove indices of the sentence.
+1. Remove indices of the sentences.
 1. Remove start time and end time of each sentence.
 1. Remove descriptions which are parenthesized.
 1. Remove HTML tags which are encosed with <>.
@@ -33,6 +33,19 @@ to
  'Your momma wants to speak with you.'   
  ...   
     
+## Usage
+### Folder structure
+```
+movie_scripts    
+|- main.py   
+|- original_scripts   
+        |- movie_name.srt # has to be located here before running a following command.   
+|- processed_scripts   
+        |- movie_name.txt # will be created when you run a following command.   
+```
+### Command to run
+python3 main.py --name movie_name
+
 
 ## How to Parse it?
 I used LL parser to parse .srt file. 
@@ -65,6 +78,8 @@ REST=",";
 LPAREN="(";   
 RPAREN=")";   
 ANY=any character except above.;   
+
+
 
 
 
