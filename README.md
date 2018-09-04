@@ -44,8 +44,9 @@ movie_scripts
         |- movie_name.txt # will be created when you run a following command.   
 ```
 ### Command to run
+```
 python3 main.py --name movie_name
-
+```
 
 ## How to Parse it?
 I used LL parser to parse .srt file. 
